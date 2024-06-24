@@ -23,6 +23,7 @@ const RestaurantList = (props) => {
         e.stopPropagation();
         try {
             const response = await RestaurantFinder.delete(`/${id}`);
+            console.log(response);
             setRestaurants(restaurants.filter(restaurant => {
                 return restaurant.id !== id;
             }
@@ -44,7 +45,7 @@ const RestaurantList = (props) => {
         <table className="table table-hover table-dark">
             <thead className='text-center'>
                 <tr className="bg-primary">
-                    <th scope="col" >Restaurant</th>
+                    <th scope="col">Restaurant</th>
                     <th scope="col">Location</th>
                     <th scope="col">Price range</th>
                     <th scope="col">Rating</th>

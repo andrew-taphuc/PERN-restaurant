@@ -79,8 +79,6 @@ app.put("/api/v1/restaurants/:id", async(req, res) => {
     }
     console.log(req.params.id);
     console.log(req.body);
-
-    
 });
 
 //Delete
